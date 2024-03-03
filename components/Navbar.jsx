@@ -1,50 +1,58 @@
 'use client';
-import Image from "next/image";
-import { navVariants } from "../utils/motion";
-import { motion } from "framer-motion";
 import { useState } from "react";
-const Navbar = () => {
+import Link from "next/link";
+import {FaBars, FaTimes, FaToggleOn, FaToggleOff} from 'react-icons/fa'
+
+const Navbar = ({handleDarkmode, darkmode}) => {
   const [open, setOpen] = useState(false)
+  
+
+  const Links = [
+    {name: 'About' , path: '#about'},
+    {name: 'Experience' , path: '#experience'},
+    {name: 'Projects' , path: '#projects'},
+    {name: 'Hire me' , path: '#contact'}
+
+  ]
 
   const handleNav = () => {
     setOpen(!open)
   }
+
+ 
   return (
-    <motion.nav
-   variants={navVariants}
-   initial= 'hidden'
-   whileInView='show'
-   className="w-10/12 md:w-11/12 xl:w-10/12 mx-auto flex justify-between items-center py-8">
+    <nav className="w-full font-font1 dark:bg-neutral-700">
   
-   <div >
-    <Image 
-    src='/search.svg'
-    alt="search"
-    width={20}
-    height={20}
-    className="w-[24px] h-[24px] object-contain"
-    /> 
-   </div>
-   <div className="font-extrabold text-[24px] leading-[30px] text-white">ARISEKOLA</div>
-   <div onClick={handleNav} className="cursor-pointer">
+     <div className="w-10/12 mx-auto flex justify-between items-center py-8">
+      <div className="font-bold text-lg lg:text-[24px] leading-[30px] text-black cursor-pointer dark:text-neutral-200">ARISEKOLA</div>
+      <div className="flex  gap-4 items-center">
+         <div className="hidden md:flex  gap-4 cursor-pointer ">
+         {
+          Links.map((link) => (
+            <div key={link.name} >
+              <Link href={link.path} className="hover:underline-offset-8 hover:border-b-2 hover:border-black dark:border-white dark:text-neutral-200">{link.name}</Link>
+            </div>
+          ))
+         }
+         </div>
+         <div className="cursor-pointer flex justify-center items-center" onClick={handleDarkmode}>
+           {
+            darkmode ? (<button className="dark:text-neutral-200"><FaToggleOn className="text-2xl" /></button>)
+            :
+            ( <button className="dark:text-neutral-200"><FaToggleOff className="text-2xl" /></button>)
+           }
+         </div>
+       </div>
+
+
+   <div onClick={handleNav} className="block md:hidden cursor-pointer">
   {
-    open ? ( <Image 
-      src='/close.png'
-      alt="close"
-      width={16}
-      height={16}
-      className=" object-contain"
-      /> ) : ( <Image 
-      src='/menu.svg'
-      alt="menu"
-      width={20}
-      height={20}
-      className="w-[24px] h-[24px] object-contain"
-      /> )
+    open ? (<FaTimes className="dark:text-white" />)  :  (<FaBars className="dark:text-white" />)
   }
    </div>
-  
-  </motion.nav>
+ 
+   </div>
+  </nav>
   )
 }
 

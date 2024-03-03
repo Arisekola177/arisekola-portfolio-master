@@ -8,16 +8,11 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        bodyFont: ["Poppins", "sans-serif"],
-        titleFont: ["Montserrat", "sans-serif"],
+      font1: ["Poppins", "sans-serif"],
+      font2: ["Montserrat", "sans-serif"],
       },
-      colors: {
-        'primary-black': '#1A232E',
-        'secondary-white': '#c7c7c7',
-      },
-     
-     
     },
   },
   plugins: [],
+  darkMode: 'class'
 }
