@@ -16,8 +16,8 @@ export default function Home() {
     setDarkmode(!darkmode)
   } 
   return (
-    <div className={`${darkmode && 'dark'}`}>
-        <div className="dark:bg-neutral-700">
+    <div className={`${darkmode && 'dark'}` }>
+        <div className="dark:bg-neutral-700 font-Poppins">
        <Navbar handleDarkmode={handleDarkmode} darkmode={darkmode} />
      
         <Hero />

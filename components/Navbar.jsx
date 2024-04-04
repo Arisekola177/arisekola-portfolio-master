@@ -21,10 +21,12 @@ const Navbar = ({handleDarkmode, darkmode}) => {
 
  
   return (
-    <nav className="w-full font-font1 dark:bg-neutral-700">
+    <nav className="w-full font-font1 dark:bg-neutral-700 ">
   
      <div className="w-10/12 mx-auto flex justify-between items-center py-8">
+      <Link href='/'>
       <div className="font-bold text-lg lg:text-[24px] leading-[30px] text-black cursor-pointer dark:text-neutral-200">ARISEKOLA</div>
+      </Link>
       <div className="flex  gap-4 items-center">
          <div className="hidden md:flex  gap-4 cursor-pointer ">
          {

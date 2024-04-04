@@ -1,72 +1,38 @@
-
+import { FaCode } from "react-icons/fa"
 
 const Experience = () => {
   return (
-    <div className="w-10/12 mx-auto mt-32 font-font1">    
+    <div id="experience" className="w-10/12 mx-auto mt-32 font-font1">    
     <div className="text-center ">
      <p className="dark:text-neutral-200">| Explore my </p>
-       <p className="font-semibold mt-5 text-3xl dark:text-neutral-200">Experience</p>
+       <p className="font-semibold mt-5 text-3xl dark:text-neutral-200">Expertise</p>
     </div>
-       <div className="mt-10 flex flex-col gap-10 md:flex-row md:justify-between items-center ">
-         <div className="w-full h-full md:h-[300px] lg:w-[600px] lg:h-[350px] border-[1px] border-black dark:border-neutral-200 rounded-2xl">
-              <h2 className="lg:py-4 py-2 lg:text-2xl text-xl font-bold text-center dark:text-neutral-200">Frontend Development</h2>
-              <div className="flex justify-between items-center w-full lg:w-[400px] mx-auto py-4 ">
-                <div className="flex flex-col gap-1 lg:gap-2   ">
-                   <p className="uppercase font-bold text-lg lg:text-xl px-2 dark:text-neutral-200 ">html</p>
-                   <p className="text-gray-300 text-base px-2">Experienced</p>
-                </div>
-                <div className="flex flex-col gap-1 lg:gap-2 ">
-                   <p className="uppercase font-bold text-lg lg:text-xl px-2 dark:text-neutral-200">css</p>
-                   <p className="text-gray-300 text-base px-2">Experienced</p>
-                </div>
-              </div>
-              <div className="flex justify-between items-center w-full lg:w-[400px] mx-auto py-4  ">
-                <div className="flex flex-col gap-1 lg:gap-2 ">
-                   <p className="uppercase font-bold text-lg lg:text-xl px-2 dark:text-neutral-200">Javascript</p>
-                   <p className="text-gray-300 text-base px-2">Intermediate</p>
-                </div>
-                <div className="flex flex-col gap-1 lg:gap-2 ">
-                   <p className="uppercase font-bold text-lg lg:text-xl px-2 dark:text-neutral-200">Tailwind</p>
-                   <p className="text-gray-300 text-base px-2">Experienced</p>
-                </div>
-              </div>
-              <div className="flex justify-between items-center w-full lg:w-[400px] mx-auto py-4  ">
-                <div className="flex flex-col gap-1 lg:gap-2 ">
-                   <p className="uppercase font-bold text-lg lg:text-xl px-2 dark:text-neutral-200">React.js</p>
-                   <p className="text-gray-300 text-base px-2">Intermediate</p>
-                </div>
-                <div className="flex flex-col gap-1 lg:gap-2 ">
-                   <p className="uppercase font-bold text-lg lg:text-xl px-2 dark:text-neutral-200">Next.js</p>
-                   <p className="text-gray-300 text-base sm:px-2 px-2">Intermediate</p>
-                </div>
-              </div>
+         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-10">
+             <div className="flex flex-col gap-4 bg-neutral-200 shadow-xl cursor-pointer rounded-lg py-5 px-3 hover:border-b-[4px] border-blue-500 duration-300 hover:scale-95 ">
+                  <FaCode className="text-neutral-700 text-3xl" />
+
+                  <h2 className="font-bold text-xl">Front-End</h2>
+
+                  <p className="text-sm leading-8">As a proficient frontend developer skilled in React, Tailwind, and Redux, I design and construct the visual and interactive components of websites and web applications, ensuring they meet high standards of user-friendliness, responsiveness, accessibility, and cross-browser compatibility, all while collaborating
+                   effectively with cross-functional teams and remaining updated on the latest advancements and best practices in the field.</p>
+             </div>
+
+             <div className="flex flex-col gap-4  bg-neutral-200  shadow-xl cursor-pointer rounded-lg py-5 px-3 hover:border-b-[4px] border-blue-500 duration-300 hover:scale-95 ">
+                  <FaCode className="text-neutral-700 text-3xl" />
+
+                  <h2 className="font-bold text-xl">Back-End</h2>
+
+                  <p className="text-sm leading-8">As a seasoned backend developer adept in Node.js, Express, and MongoDB, I specialize in crafting and maintaining the server-side architecture, database management, and application logic of websites and web applications. With a focus on robustness, scalability, security, and efficiency, I collaborate seamlessly with frontend developers, designers, and stakeholders to deliver solutions that meet diverse user needs. Continuously staying abreast of advancements and best practices in backend development, 
+                  I ensure our projects are at the forefront of technological innovation and industry standards.</p>
+             </div>
+             <div className="flex flex-col gap-4  bg-neutral-200  shadow-xl cursor-pointer rounded-lg py-5 px-3 hover:border-b-[4px] border-blue-500 duration-300 hover:scale-95  ">
+                  <FaCode className="text-neutral-700 text-3xl" />
+
+                  <h2 className="font-bold text-xl">UI & UX Design</h2>
+
+                  <p className="text-sm leading-8">I specialize in creating intuitive, visually appealing, and engaging digital experiences for websites and web applications. Leveraging a deep understanding of user psychology and design principles, I meticulously craft interfaces that prioritize usability, accessibility, and responsiveness across different devices and platforms. Through collaborative efforts with cross-functional teams, I translate user requirements and feedback into innovative design solutions that exceed expectations. Proficient in industry-standard tools and methodologies, I remain dedicated to continuous learning and experimentation, ensuring our projects are at the forefront of UI/UX innovation and best practices.</p>
+             </div>
          </div>
-         <div className="w-full h-full md:h-[300px] lg:w-[600px] lg:h-[350px] border-[1px] border-black dark:border-neutral-200 rounded-2xl">
-              <h2 className="py-4 text-2xl font-bold text-center dark:text-neutral-200">Backend Development</h2>
-              <div className="flex justify-between items-center w-full lg:w-[400px] mx-auto py-4">
-                <div className="flex flex-col gap-1 lg:gap-2">
-                   <p className="uppercase font-bold text-lg lg:text-xl px-2 dark:text-neutral-200">Node.js</p>
-                   <p className="text-gray-300 text-base px-2">Basic</p>
-                </div>
-                <div className="flex flex-col gap-1 lg:gap-2">
-                   <p className="uppercase font-bold text-lg lg:text-xl px-2 dark:text-neutral-200">Express</p>
-                   <p className="text-gray-300 text-base px-2">Basic</p>
-                </div>
-              </div>
-              <div className="flex justify-between items-center w-full lg:w-[400px] mx-auto py-4 ">
-                <div className="flex flex-col gap-1 lg:gap-2">
-                   <p className="uppercase font-bold text-lg lg:text-xl px-2 dark:text-neutral-200">Mongodb</p>
-                   <p className="text-gray-300 text-base px-2">Basic</p>
-                </div>
-                <div className="flex flex-col gap-1 lg:gap-2">
-                   <p className="uppercase font-bold text-lg lg:text-xl px-2 dark:text-neutral-200">Sanity</p>
-                   <p className="text-gray-300 text-base px-2">Basic</p>
-                </div>
-              </div>
-              
-             
-         </div>
-       </div>
     </div>
   )
 }
