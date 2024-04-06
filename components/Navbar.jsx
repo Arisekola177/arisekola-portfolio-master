@@ -11,47 +11,35 @@ const Navbar = ({handleDarkmode, darkmode}) => {
     {name: 'About' , path: '#about'},
     {name: 'Experience' , path: '#experience'},
     {name: 'Projects' , path: '#projects'},
-    {name: 'Hire me' , path: '#contact'}
+
 
   ]
 
-  const handleNav = () => {
-    setOpen(!open)
-  }
 
  
   return (
-    <nav className="w-full font-font1 dark:bg-neutral-700 ">
+    <nav className="w-full font-font1 sticky top-0 z-10 ">
   
-     <div className="w-10/12 mx-auto flex justify-between items-center py-8">
+     <div className="lg:w-8/12 sm:w-10/12 mx-auto flex flex-col justify-center items-center   md:flex-row md:justify-between md:items-center py-8">
       <Link href='/'>
-      <div className="font-bold text-lg lg:text-[24px] leading-[30px] text-black cursor-pointer dark:text-neutral-200">ARISEKOLA</div>
+      <div className="font-bold text-lg lg:text-[24px]  text-white hover:text-sky-500 ">ARISEKOLA</div>
       </Link>
-      <div className="flex  gap-4 items-center">
-         <div className="hidden md:flex  gap-4 cursor-pointer ">
+     
+         <div className="flex items-center sm:mt-5 md:mt-0 gap-4 cursor-pointer ">
          {
           Links.map((link) => (
             <div key={link.name} >
-              <Link href={link.path} className="hover:underline-offset-8 hover:border-b-2 hover:border-black dark:border-white dark:text-neutral-200">{link.name}</Link>
+              <Link href={link.path} className="text-neutral-200 sm:text-xs md:text-sm hover:text-sky-500 border-sky-500  hover:underline-offset-8 hover:border-b-2 ">{link.name}</Link>
             </div>
           ))
          }
+           <button className="text-white bg-gradient-to-t from-sky-500 to-cyan-500 p-2 rounded-lg sm:text-xs md:text-sm hover:scale-95 duration-300">
+           <Link href='https://resume-topaz-beta.vercel.app/' target="blank">View Resume</Link>
+           </button>
          </div>
-         <div className="cursor-pointer flex justify-center items-center" onClick={handleDarkmode}>
-           {
-            darkmode ? (<button className="dark:text-neutral-200"><FaToggleOn className="text-2xl" /></button>)
-            :
-            ( <button className="dark:text-neutral-200"><FaToggleOff className="text-2xl" /></button>)
-           }
-         </div>
-       </div>
+        
+       
 
-
-   <div onClick={handleNav} className="block md:hidden cursor-pointer">
-  {
-    open ? (<FaTimes className="dark:text-white" />)  :  (<FaBars className="dark:text-white" />)
-  }
-   </div>
  
    </div>
   </nav>
